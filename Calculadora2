@@ -1,0 +1,143 @@
+
+ 
+// QUESTAO 2
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora 2</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        header{
+            background-color: #10197a;
+            padding: 50px
+        }
+        header h1{
+            color: rgb(80, 165, 235);
+        }
+
+        .container{
+            border: 1px solid #75fffd;
+            border-radius: 25px;
+            margin-top: 30px;
+            padding: 5px;
+            text-align: center;
+
+        }
+
+        input{
+            margin-top: 10px;
+            margin-left: 5px;
+            width: 50%;
+            border: 10px#0d1357
+
+        }
+        
+        input:hover{
+            background-color: #98d6e3;
+        }
+
+        button{
+            margin-top: 10px;
+            margin-left: 5px;
+            width: 50%;
+
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Calculadora 2</h1>     
+    </header>
+
+    <div class="container">
+        <input type="number" id="x" placeholder="valor de x">
+        <input type="number" id="y" placeholder="valor de y">
+        <input type="number" id="z" placeholder="Resultado" readonly>
+        <button type="button" onclick="somar()">+</button>
+        <button type="button" onclick="subtrair()">-</button>
+        <button type="button" onclick="dividir()">/</button>
+        <button type="button" onclick="multiplicar()">*</button>
+        <button type="button" onclick="potencia()">^</button>
+        <button type="button" onclick="raiz()">√</button>
+        <button type="button" onclick="restdiv()">//</button>
+        <button type="button" onclick="zero()">Reiniciar</button>
+    </div>
+
+    <script>
+         const somar = function(){
+             let x = document.getElementById('x').value
+             let y = document.getElementById('y').value
+             z = parseInt(x) + parseInt(y)
+             document.getElementById('z').value = z
+             console.log(z)
+         }
+
+         const subtrair = function(){
+             let x = document.getElementById('x').value
+             let y = document.getElementById('y').value
+             z = parseInt(x) - parseInt(y)
+             document.getElementById('z').value = z
+             console.log(z)
+         }
+
+         const dividir = function(){
+             let x = document.getElementById('x').value
+             let y = document.getElementById('y').value
+             z = parseInt(x) / parseInt(y)
+             document.getElementById('z').value = z
+             console.log(z)
+         }
+
+         const multiplicar = function(){
+             let x = document.getElementById('x').value
+             let y = document.getElementById('y').value
+             z = parseInt(x) * parseInt(y)
+             document.getElementById('z').value = z
+             console.log(z)
+         }
+
+
+         const potencia = function(){
+             let x = document.getElementById('x').value
+             let y = document.getElementById('y').value
+             z = parseInt(x) ** parseInt(y)
+             document.getElementById('z').value = z
+             console.log(z)
+         }
+
+         const raiz = function(){
+             let x = document.getElementById('x').value
+             let y = document.getElementById('y').value
+             z = Math.sqrt(parseInt(x))
+             document.getElementById('z').value = z
+             console.log(z)
+         }
+
+         const restdiv = function(){
+             let x = document.getElementById('x').value
+             let y = document.getElementById('y').value
+             z = parseInt(x) % parseInt(y)
+             document.getElementById('z').value = z
+             console.log(z)
+         }
+
+         const zero = function(){
+             document.getElementById('x').value = ""
+             document.getElementById('y').value = ""
+             document.getElementById('z').value = ""
+         }
+
+         
+    </script>
+
+
+</body>
+</html>
+
